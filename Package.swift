@@ -22,8 +22,8 @@ let package = Package(
         .package(url: "https://github.com/sinoru/swift-sodium.git", from: "0.0.2"),
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.2.1"),
         .package(url: "https://github.com/Electric-Coin-Company/MnemonicSwift.git", from: "2.2.4"),
-        .package(url: "https://github.com/realm/SwiftLint", from: "0.59.1"),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.57.2"),
+        // .package(url: "https://github.com/realm/SwiftLint", from: "0.59.1"),
+        // .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.57.2"),
         .package(url: "https://github.com/norio-nomura/Base32.git", from: "0.9.0"),
     ],
     targets: [
@@ -35,9 +35,11 @@ let package = Package(
                 .product(name: "MessagePack", package: "MessagePack.swift"),
                 .product(name: "Sodium", package: "swift-sodium"),
             ],
+            /*
             plugins: [
                 .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint"),
             ]
+            */
         ),
         .testTarget(
             name: "x-hd-wallet-apiTests",
