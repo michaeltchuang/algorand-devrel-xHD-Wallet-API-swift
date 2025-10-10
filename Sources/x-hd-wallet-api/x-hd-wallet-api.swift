@@ -125,7 +125,7 @@ public class XHDWalletAPI {
         0x8000_0000 + num
     }
 
-    func getBIP44PathFromContext(context: KeyContext, account: UInt32, change: UInt32, keyIndex: UInt32) -> [UInt32] {
+    public func getBIP44PathFromContext(context: KeyContext, account: UInt32, change: UInt32, keyIndex: UInt32) -> [UInt32] {
         switch context {
         case .Address:
             [harden(44), harden(283), harden(account), change, keyIndex]
